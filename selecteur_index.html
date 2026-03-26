@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sélecteur Compresseur à Vis | Worthington Creyssensac</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--r:#E2001A;--rd:#B80015;--ch:#1A1A2E;--dk:#16213E;--md:#0F3460;
+--g1:#F8F9FA;--g2:#E9ECEF;--g3:#DEE2E6;--g4:#CED4DA;--g5:#ADB5BD;--g6:#6C757D;--g7:#495057;--g8:#343A40;
+--ok:#00A896;--wa:#F4A261;--inf:#4361EE;--pu:#7C3AED;
+--rad:12px;--rs:8px;--shs:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 16px rgba(0,0,0,.1);--shl:0 8px 32px rgba(0,0,0,.14);--tr:all .3s cubic-bezier(.4,0,.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--g1);color:var(--g8);min-height:100vh;overflow-x:hidden}
+
+.header{background:linear-gradient(135deg,var(--ch),var(--dk) 40%,var(--md));position:sticky;top:0;z-index:100;box-shadow:var(--shl)}
+.h-in{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.la{display:flex;align-items:center;gap:14px}
+.lm{width:42px;height:42px;background:var(--r);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;font-size:18px;color:#fff;box-shadow:0 2px 8px rgba(226,0,26,.4)}
+.lt{display:flex;flex-direction:column;gap:1px}
+.lb{font-size:16px;font-weight:700;color:#fff;letter-spacing:.5px}
+.ls{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+.hb{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,.7);font-weight:500}
+
+.pb{background:var(--ch);border-bottom:1px solid rgba(255,255,255,.06)}
+.pb-in{max-width:1200px;margin:0 auto;padding:10px 24px;display:flex;gap:4px;align-items:center}
+.sd{display:flex;align-items:center;gap:4px;flex:1}
+.sd .dt{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:rgba(255,255,255,.25);transition:var(--tr);flex-shrink:0}
+.sd .ln{flex:1;height:2px;background:rgba(255,255,255,.06);border-radius:1px;transition:var(--tr)}
+.sd.ac .dt{background:var(--r);border-color:var(--r);color:#fff;box-shadow:0 0 12px rgba(226,0,26,.5)}
+.sd.dn .dt{background:var(--ok);border-color:var(--ok);color:#fff}
+.sd.dn .ln,.sd.ac .ln{background:var(--r)}
+
+.mn{max-width:960px;margin:0 auto;padding:28px 24px 80px}
+.stp{display:none;animation:fu .45s ease}.stp.ac{display:block}
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.sh{margin-bottom:24px}
+.sn{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--r);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.st{font-size:26px;font-weight:700;color:var(--ch);line-height:1.2}
+.sd2{font-size:14px;color:var(--g6);margin-top:6px;line-height:1.6}
+
+.fg{margin-bottom:18px}.fl{display:block;font-size:12px;font-weight:600;color:var(--g7);margin-bottom:6px;letter-spacing:.3px}
+.fi{width:100%;padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;border:2px solid var(--g3);border-radius:var(--rs);background:#fff;color:var(--g8);transition:var(--tr);outline:none}
+.fi:focus{border-color:var(--r);box-shadow:0 0 0 3px rgba(226,0,26,.1)}.fi::placeholder{color:var(--g4)}
+.fu{position:relative}.fu .ul{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:var(--g5);pointer-events:none}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:600px){.fr{grid-template-columns:1fr}}
+.fs{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236C757D' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+
+.og{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:600px){.og{grid-template-columns:1fr}}
+.oc{background:#fff;border:2px solid var(--g2);border-radius:var(--rad);padding:20px;cursor:pointer;transition:var(--tr);position:relative;overflow:hidden}
+.oc:hover{border-color:var(--g4);box-shadow:var(--shm);transform:translateY(-2px)}
+.oc.se{border-color:var(--r);background:linear-gradient(135deg,rgba(226,0,26,.02),rgba(226,0,26,.06));box-shadow:0 0 0 3px rgba(226,0,26,.1)}
+.oc.se::after{content:'✓';position:absolute;top:10px;right:10px;width:22px;height:22px;background:var(--r);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.oi{font-size:26px;margin-bottom:10px}.ott{font-size:15px;font-weight:700;color:var(--ch);margin-bottom:4px}
+.od{font-size:12px;color:var(--g6);line-height:1.5}
+.otg{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:12px;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.tp{background:#E8F4FD;color:#1976D2}.t2{background:#FFF3E0;color:#E65100}
+
+.br{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.btn{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:12px 24px;border:none;border-radius:var(--rs);cursor:pointer;transition:var(--tr);display:inline-flex;align-items:center;gap:6px;letter-spacing:.3px}
+.bp{background:var(--r);color:#fff;box-shadow:0 2px 8px rgba(226,0,26,.3)}.bp:hover{background:var(--rd);transform:translateY(-1px)}.bp:disabled{background:var(--g4);box-shadow:none;cursor:not-allowed;transform:none}
+.bs{background:#fff;color:var(--g7);border:2px solid var(--g3)}.bs:hover{border-color:var(--g4);background:var(--g1)}
+.bl{padding:14px 32px;font-size:15px}
+.ib{background:#EBF5FB;border-left:4px solid var(--inf);padding:12px 16px;border-radius:0 var(--rs) var(--rs) 0;font-size:12px;color:var(--g7);margin:14px 0;line-height:1.6}.ib strong{color:var(--inf)}
+.wbox{background:#FFF8E1;border-left:4px solid var(--wa);padding:12px 16px;border-radius:0 var(--rs) var(--rs) 0;font-size:12px;color:var(--g7);margin:14px 0;line-height:1.6}.wbox strong{color:#E65100}
+.dv{height:1px;background:var(--g2);margin:20px 0}.hd{display:none!important}
+
+.ic{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ich{padding:7px 14px;border-radius:18px;border:2px solid var(--g2);background:#fff;font-size:12px;cursor:pointer;transition:var(--tr);font-weight:500}
+.ich:hover{border-color:var(--r)}.ich.se{border-color:var(--r);background:rgba(226,0,26,.06);color:var(--r);font-weight:600}
+
+.ist{width:100%;border-collapse:collapse;margin-top:14px;font-size:12px;background:#fff;border-radius:var(--rad);overflow:hidden;box-shadow:var(--shs)}
+.ist th{background:var(--ch);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+.ist td{padding:8px 12px;border-bottom:1px solid var(--g2)}.ist tr:hover td{background:var(--g1)}
+.ist tr.hi td{background:rgba(226,0,26,.04);font-weight:600}
+
+/* Step 6 chain */
+.tc{display:flex;align-items:center;gap:0;margin:18px 0;flex-wrap:wrap;justify-content:center}
+.ti{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 8px;border-radius:var(--rad);border:2px solid var(--g2);background:#fff;cursor:pointer;transition:var(--tr);min-width:72px}
+.ti:hover{border-color:var(--g4)}.ti.on{border-color:var(--ok);background:rgba(0,168,150,.06)}.ti.ma{border-color:var(--r);background:rgba(226,0,26,.04);cursor:default}
+.ti .tic{font-size:22px}.ti .tlb{font-size:9px;font-weight:600;color:var(--g7);text-align:center;line-height:1.3}
+.taw{font-size:16px;color:var(--g4);padding:0 2px}
+
+.srow{display:flex;align-items:center;gap:10px;margin:6px 0}
+.sw{position:relative;width:40px;height:22px;flex-shrink:0}.sw input{opacity:0;width:0;height:0}
+.sw .sl{position:absolute;inset:0;background:var(--g3);border-radius:11px;cursor:pointer;transition:var(--tr)}
+.sw .sl::before{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;background:#fff;border-radius:50%;transition:var(--tr);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.sw input:checked+.sl{background:var(--ok)}.sw input:checked+.sl::before{transform:translateX(18px)}
+.swl{font-size:12px;font-weight:500;color:var(--g7)}
+
+/* Result cards */
+.rc{background:#fff;border-radius:var(--rad);box-shadow:var(--shl);overflow:hidden;margin-bottom:18px;border:1px solid var(--g2)}
+.rch{background:linear-gradient(135deg,var(--ch),var(--dk));padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.rch h3{font-size:16px;color:#fff;font-weight:700}.rch .bg{background:var(--r);color:#fff;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700;letter-spacing:.5px}
+.rcb{padding:20px}
+
+.pc{display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start}@media(max-width:640px){.pc{grid-template-columns:1fr}}
+.pi{width:100%;aspect-ratio:1;border-radius:var(--rs);overflow:hidden;background:var(--g1)}
+.pm{font-family:'Space Mono',monospace;font-size:20px;font-weight:700;color:var(--r)}
+.pr{font-size:12px;color:var(--g6);margin-bottom:12px}
+.ps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}@media(max-width:500px){.ps{grid-template-columns:repeat(2,1fr)}}
+.psi{text-align:center;padding:10px;background:var(--g1);border-radius:var(--rs)}
+.psv{font-family:'Space Mono',monospace;font-size:20px;font-weight:700;color:var(--ch)}.psl{font-size:9px;color:var(--g6);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+.pfs{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.pf{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:var(--g1);border-radius:14px;font-size:11px;font-weight:500;color:var(--g7)}.pf .fd{width:5px;height:5px;border-radius:50%;background:var(--ok)}
+
+.cp{margin-top:14px;padding:14px;background:var(--g1);border-radius:var(--rs);border:1px dashed var(--g4)}
+.cb{font-size:12px;font-weight:600;color:var(--r);cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:6px 0;background:none;border:none;font-family:'DM Sans',sans-serif;transition:var(--tr)}.cb:hover{color:var(--rd)}
+.al{margin-top:10px;display:grid;gap:8px}
+.ai{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border:2px solid var(--g2);border-radius:var(--rs);cursor:pointer;transition:var(--tr);font-size:13px}
+.ai:hover{border-color:var(--r);box-shadow:var(--shs)}.ai.ch{border-color:var(--r);background:rgba(226,0,26,.04)}
+.ai .an{font-weight:700;color:var(--ch)}.ai .as{font-size:11px;color:var(--g6)}.ai .asl{font-size:11px;font-weight:600;color:var(--r);white-space:nowrap}
+
+/* ═══ EDITABLE CHAIN v4 ═══ */
+.ec-wrap{padding:14px;background:var(--g1);border-radius:var(--rs);min-height:100px}
+.ec-line{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin-bottom:8px}
+.ec-line-label{width:100%;font-size:10px;font-weight:700;color:var(--r);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;padding:4px 0;border-bottom:2px dashed var(--g3)}
+
+.ec-item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 8px;background:#fff;border-radius:var(--rs);box-shadow:var(--shs);min-width:88px;text-align:center;position:relative;border:2px solid transparent;transition:var(--tr)}
+.ec-item.on{border-color:var(--ok)}.ec-item.off{opacity:.3;border:2px dashed var(--g4);background:var(--g1)}
+.ec-item .ei-img{width:65px;height:65px;border-radius:6px;overflow:hidden}.ec-item .ei-img svg{width:100%;height:100%}
+.ec-item .ei-name{font-size:10px;font-weight:700;color:var(--g8);line-height:1.2}
+.ec-item .ei-det{font-size:9px;color:var(--g6)}
+.ec-item .ei-tog{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;border:2px solid var(--g3);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:9px;font-weight:700;transition:var(--tr);z-index:2}
+.ec-item .ei-tog:hover{border-color:var(--r);color:var(--r)}
+.ec-item.on .ei-tog{background:var(--ok);border-color:var(--ok);color:#fff}
+.ec-item.off .ei-tog{background:var(--g4);border-color:var(--g4);color:#fff}
+.ec-item .ei-rm{position:absolute;top:-6px;left:-6px;width:18px;height:18px;border-radius:50%;background:#fff;border:1.5px solid var(--g3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:8px;color:var(--g5);transition:var(--tr);z-index:2}
+.ec-item .ei-rm:hover{border-color:var(--r);color:var(--r);background:#FFF0F0}
+.ec-item select{font-size:9px;padding:2px 3px;border:1px solid var(--g3);border-radius:4px;background:#fff;color:var(--g7);margin-top:2px;max-width:82px;font-family:'DM Sans',sans-serif}
+.ec-pur{display:flex;align-items:center;gap:3px;margin-top:3px;font-size:8px;cursor:pointer;color:var(--g6);transition:var(--tr)}
+.ec-pur.on{color:var(--ok);font-weight:700}
+.ec-pur .ep{width:10px;height:10px;border-radius:3px;border:1.5px solid var(--g4);display:flex;align-items:center;justify-content:center;font-size:6px;transition:var(--tr)}
+.ec-pur.on .ep{background:var(--ok);border-color:var(--ok);color:#fff}
+
+.ec-arrow{display:flex;align-items:center;color:var(--g4);font-size:14px;padding:0 2px;flex-shrink:0}
+
+/* Insert + button between items */
+.ec-ins{display:flex;align-items:center;padding:0 1px;flex-shrink:0}
+.ec-ins-btn{width:20px;height:20px;border-radius:50%;border:2px dashed var(--g4);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;font-weight:700;color:var(--g5);transition:var(--tr);position:relative}
+.ec-ins-btn:hover{border-color:var(--r);color:var(--r);background:rgba(226,0,26,.04);transform:scale(1.15)}
+
+/* Popup menu */
+.pop-menu{position:fixed;background:#fff;border:1px solid var(--g3);border-radius:var(--rs);box-shadow:var(--shl);padding:6px 0;z-index:200;min-width:230px;max-height:320px;overflow-y:auto}
+.pop-item{padding:8px 14px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:var(--tr)}
+.pop-item:hover{background:var(--g1)}
+.pop-item .pi-icon{font-size:16px;flex-shrink:0}
+.pop-item .pi-name{font-weight:600;color:var(--g8)}.pop-item .pi-desc{font-size:10px;color:var(--g6)}
+
+/* Options */
+.opts{margin-top:16px;padding:16px;background:var(--g1);border-radius:var(--rs)}
+.opt-t{font-size:13px;font-weight:700;color:var(--ch);margin-bottom:10px}
+.opt-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.opc{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border:2px solid var(--g2);border-radius:var(--rs);cursor:pointer;transition:var(--tr)}
+.opc:hover{border-color:var(--g4)}.opc.on{border-color:var(--ok);background:rgba(0,168,150,.04)}
+.opc .ock{width:18px;height:18px;border-radius:4px;border:2px solid var(--g3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;transition:var(--tr)}
+.opc.on .ock{background:var(--ok);border-color:var(--ok);color:#fff}
+.opc .ocn{font-size:12px;font-weight:600;color:var(--g8)}.opc .ocd{font-size:10px;color:var(--g5)}
+
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+.si{text-align:center;padding:14px;background:var(--g1);border-radius:var(--rs)}
+.sv{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--ch)}
+.sll{font-size:9px;color:var(--g6);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+@media print{.header,.pb,.br,.stp:not(.pa){display:none!important}.stp.pa{display:block!important}.rc{box-shadow:none;border:1px solid #ddd}body{background:#fff}.mn{max-width:100%}}
+</style>
+</head>
+<body>
+
+<header class="header"><div class="h-in"><div class="la"><div class="lm">WC</div><div class="lt"><div class="lb">Worthington Creyssensac</div><div class="ls">Sélecteur Air Comprimé</div></div></div><div class="hb">Compresseurs à vis · 2,2 – 90 kW</div></div></header>
+
+<div class="pb"><div class="pb-in" id="pBar">
+  <div class="sd ac" data-s="1"><div class="dt">1</div><div class="ln"></div></div>
+  <div class="sd" data-s="2"><div class="dt">2</div><div class="ln"></div></div>
+  <div class="sd" data-s="3"><div class="dt">3</div><div class="ln"></div></div>
+  <div class="sd" data-s="4"><div class="dt">4</div><div class="ln"></div></div>
+  <div class="sd" data-s="5"><div class="dt">5</div><div class="ln"></div></div>
+  <div class="sd" data-s="6"><div class="dt">6</div><div class="ln"></div></div>
+  <div class="sd" data-s="7"><div class="dt">7</div></div>
+</div></div>
+
+<div class="mn">
+
+  <!-- S1 -->
+  <div class="stp ac" id="step1">
+    <div class="sh"><div class="sn">Étape 01</div><div class="st">Dimensionnez votre projet</div><div class="sd2">Paramètres de votre installation d'air comprimé.</div></div>
+    <div class="fr">
+      <div class="fg"><label class="fl">Débit d'air max requis</label><div class="fu"><input type="number" class="fi" id="inD" placeholder="Ex: 250" min="10" max="1800"><span class="ul">m³/h</span></div></div>
+      <div class="fg"><label class="fl">Pression de service</label><select class="fi fs" id="inP"><option value="">Choisir</option><option value="7.5">7,5 bar</option><option value="8">8 bar</option><option value="10">10 bar</option><option value="13">13 bar</option></select></div>
+    </div>
+    <div class="fg"><label class="fl">Température ambiante salle compresseur</label><select class="fi fs" id="inT"><option value="">Choisir</option><option value="25">≤ 25°C – Standard</option><option value="35">26 – 35°C – Chaud</option><option value="46">36 – 46°C – Très chaud</option></select></div>
+    <div class="ib"><strong>💡</strong> 1 kW ≈ 6–8 m³/h à 8 bar. L'énergie = 75% du coût total de possession d'un compresseur sur sa durée de vie.</div>
+    <div class="br"><button class="btn bp" onclick="go(2)">Suivant →</button></div>
+  </div>
+
+  <!-- S2 -->
+  <div class="stp" id="step2">
+    <div class="sh"><div class="sn">Étape 02</div><div class="st">Type d'utilisation</div><div class="sd2">La régulation dépend du profil de consommation.</div></div>
+    <div class="og"><div class="oc" onclick="sel('usage','variable',this)"><div class="oi">📈</div><div class="ott">Débit variable</div><div class="od">Consommation fluctuante. Adaptation temps réel.</div><span class="otg t2">VSD</span></div><div class="oc" onclick="sel('usage','fixe',this)"><div class="oi">📊</div><div class="ott">Débit stable</div><div class="od">Consommation constante, pleine charge.</div><span class="otg tp">Fixe</span></div></div>
+    <div class="br"><button class="btn bs" onclick="go(1)">← Retour</button><button class="btn bp" onclick="go(3)" id="b2" disabled>Suivant →</button></div>
+  </div>
+
+  <!-- S3 -->
+  <div class="stp" id="step3">
+    <div class="sh"><div class="sn">Étape 03</div><div class="st">Gamme</div><div class="sd2">Investissement maîtrisé ou ROI maximal.</div></div>
+    <div class="og"><div class="oc" onclick="sel('gamme','professionnelle',this)"><div class="oi">🏭</div><div class="ott">Professionnelle</div><div class="od">Gamme classique Rollair. PME et artisans.</div><span class="otg tp">Invest. optimisé</span></div><div class="oc" onclick="sel('gamme','industrielle',this)"><div class="oi">⚡</div><div class="ott">Industrielle</div><div class="od">iPM, jusqu'à 45% d'économies. ROI 1-2 ans.</div><span class="otg t2">ROI max</span></div></div>
+    <div class="br"><button class="btn bs" onclick="go(2)">← Retour</button><button class="btn bp" onclick="go(4)" id="b3" disabled>Suivant →</button></div>
+  </div>
+
+  <!-- S4 -->
+  <div class="stp" id="step4">
+    <div class="sh"><div class="sn">Étape 04</div><div class="st">Compresseur supplémentaire ?</div><div class="sd2">Sécurisez votre production.</div></div>
+    <div class="og"><div class="oc" onclick="sel('backup','non',this)"><div class="oi">1️⃣</div><div class="ott">Non</div><div class="od">Un seul compresseur.</div></div><div class="oc" onclick="sel('backup','secours',this)"><div class="oi">🛡️</div><div class="ott">Secours</div><div class="od">Machine prête en cas de panne.</div></div><div class="oc" onclick="sel('backup','redondance',this)"><div class="oi">🔄</div><div class="ott">Redondance</div><div class="od">Deux machines en alternance.</div></div><div class="oc" onclick="sel('backup','appoint',this)"><div class="oi">➕</div><div class="ott">Appoint</div><div class="od">Deux compresseurs complémentaires.</div></div></div>
+    <div class="br"><button class="btn bs" onclick="go(3)">← Retour</button><button class="btn bp" onclick="go(5)" id="b4" disabled>Suivant →</button></div>
+  </div>
+
+  <!-- S5: Qualité d'air avec table ISO -->
+  <div class="stp" id="step5">
+    <div class="sh"><div class="sn">Étape 05</div><div class="st">Qualité d'air</div><div class="sd2">Norme ISO 8573-1 : particules, humidité, huile.</div></div>
+    <div class="og"><div class="oc" onclick="sel('airQ','non',this);hide('aqD')"><div class="oi">✅</div><div class="ott">Non</div><div class="od">Pas de contrainte spécifique.</div></div><div class="oc" onclick="sel('airQ','oui',this);show('aqD')"><div class="oi">🔬</div><div class="ott">Oui</div><div class="od">Traitement d'air requis (ISO 8573-1).</div></div></div>
+    <div id="aqD" class="hd">
+      <div class="dv"></div>
+      <div class="fl" style="margin-bottom:10px">Sélectionnez votre industrie pour une suggestion automatique :</div>
+      <div class="ic"><div class="ich" onclick="sI(this,'1.4.1')">🏗️ Industrie générale</div><div class="ich" onclick="sI(this,'1.2.1')">🍔 Agroalimentaire</div><div class="ich" onclick="sI(this,'1.2.1')">💊 Pharmacie</div><div class="ich" onclick="sI(this,'1.1.1')">🔬 Électronique</div><div class="ich" onclick="sI(this,'2.4.2')">🚗 Automobile</div><div class="ich" onclick="sI(this,'1.3.1')">🎨 Peinture / Revêtement</div><div class="ich" onclick="sI(this,'2.6.2')">🔧 Outillage pneumatique</div><div class="ich" onclick="sI(this,'1.2.1')">🧪 Chimie</div><div class="ich" onclick="sI(this,'1.1.1')">🧵 Textile</div></div>
+      <div style="margin-top:16px"><div class="fl">Ou entrez directement la classe ISO 8573-1 :</div>
+      <div class="fr" style="grid-template-columns:1fr 1fr 1fr;max-width:360px">
+        <div class="fg"><label class="fl" style="font-size:10px">Particules</label><select class="fi fs" id="iP" onchange="uI()"><option value="1">Classe 1</option><option value="2" selected>Classe 2</option><option value="3">Classe 3</option><option value="4">Classe 4</option><option value="5">Classe 5</option></select></div>
+        <div class="fg"><label class="fl" style="font-size:10px">Humidité (PRP)</label><select class="fi fs" id="iH" onchange="uI()"><option value="1">Classe 1 (−70°C)</option><option value="2">Classe 2 (−40°C)</option><option value="3">Classe 3 (−20°C)</option><option value="4" selected>Classe 4 (+3°C)</option><option value="5">Classe 5 (+7°C)</option><option value="6">Classe 6 (+10°C)</option></select></div>
+        <div class="fg"><label class="fl" style="font-size:10px">Huile résiduelle</label><select class="fi fs" id="iO" onchange="uI()"><option value="1" selected>Classe 1 (0,01 mg/m³)</option><option value="2">Classe 2 (0,1 mg/m³)</option><option value="3">Classe 3 (1 mg/m³)</option><option value="4">Classe 4 (5 mg/m³)</option></select></div>
+      </div>
+      <div id="iDsp" style="font-family:'Space Mono',monospace;font-size:16px;font-weight:700;color:var(--r);margin-top:8px">Classe ISO 8573-1 : 2.4.1</div></div>
+
+      <!-- TABLE ISO EXEMPLES -->
+      <table class="ist" style="margin-top:16px">
+        <thead><tr><th>Application type</th><th>Particules</th><th>Humidité (PRP)</th><th>Huile</th><th>Classe ISO</th><th>Traitement requis</th></tr></thead>
+        <tbody>
+          <tr><td>🔬 Électronique de précision</td><td>1</td><td>1 (−70°C)</td><td>1 (0,01 mg/m³)</td><td><strong>1.1.1</strong></td><td>Sécheur adsorp. + filtres fins + charbon</td></tr>
+          <tr><td>🍔 Agroalimentaire / 💊 Pharma</td><td>1</td><td>2 (−40°C)</td><td>1 (0,01 mg/m³)</td><td><strong>1.2.1</strong></td><td>Sécheur adsorp. + filtres fins + charbon</td></tr>
+          <tr><td>🎨 Peinture / Revêtement</td><td>1</td><td>3 (−20°C)</td><td>1 (0,01 mg/m³)</td><td><strong>1.3.1</strong></td><td>Sécheur frigo + filtres fins + charbon</td></tr>
+          <tr><td>🏗️ Industrie générale</td><td>1</td><td>4 (+3°C)</td><td>1 (0,01 mg/m³)</td><td><strong>1.4.1</strong></td><td>Sécheur frigo + filtres</td></tr>
+          <tr><td>🚗 Automobile</td><td>2</td><td>4 (+3°C)</td><td>2 (0,1 mg/m³)</td><td><strong>2.4.2</strong></td><td>Sécheur frigo + pré-filtre</td></tr>
+          <tr><td>🔧 Outillage pneumatique</td><td>2</td><td>6 (+10°C)</td><td>2 (0,1 mg/m³)</td><td><strong>2.6.2</strong></td><td>Séparateur + pré-filtre basique</td></tr>
+          <tr><td>🧪 Chimie fine</td><td>1</td><td>1 (−70°C)</td><td>1 (0,01 mg/m³)</td><td><strong>1.1.1</strong></td><td>Sécheur adsorp. + filtres + charbon</td></tr>
+          <tr><td>🧵 Textile</td><td>1</td><td>3 (−20°C)</td><td>2 (0,1 mg/m³)</td><td><strong>1.3.2</strong></td><td>Sécheur frigo + filtres fins</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="br"><button class="btn bs" onclick="go(4)">← Retour</button><button class="btn bp" onclick="go(6)" id="b5" disabled>Suivant →</button></div>
+  </div>
+
+  <!-- S6: Pré-config -->
+  <div class="stp" id="step6">
+    <div class="sh"><div class="sn">Étape 06</div><div class="st">Pré-configuration traitement</div><div class="sd2">Sélectionnez les éléments souhaités. <strong>Vous pourrez tout modifier dans la proposition finale</strong> (tailles, ajouts entre éléments, purgeurs…).</div></div>
+    <div class="tc">
+      <div class="ti ma"><div class="tic">⚙️</div><div class="tlb">Compresseur</div></div><div class="taw">→</div>
+      <div class="ti" data-i="res" onclick="tT(this)"><div class="tic">🛢️</div><div class="tlb">Réservoir</div></div><div class="taw">→</div>
+      <div class="ti" data-i="fpre" onclick="tT(this)"><div class="tic">🔽</div><div class="tlb">Pré-filtre</div></div><div class="taw">→</div>
+      <div class="ti" data-i="sec" onclick="tT(this)"><div class="tic">❄️</div><div class="tlb">Sécheur frigo</div></div><div class="taw">→</div>
+      <div class="ti" data-i="fpost" onclick="tT(this)"><div class="tic">🔽</div><div class="tlb">Filtre fin</div></div><div class="taw">→</div>
+      <div class="ti" data-i="fch" onclick="tT(this)"><div class="tic">🔽</div><div class="tlb">Charbon</div></div><div class="taw">→</div>
+      <div class="ti" data-i="sep" onclick="tT(this)"><div class="tic">💧</div><div class="tlb">Séparateur</div></div>
+    </div>
+    <div class="srow"><label class="sw"><input type="checkbox" id="dL"><span class="sl"></span></label><span class="swl">Doubler la ligne complète (Ligne 2)</span></div>
+    <div class="srow"><label class="sw"><input type="checkbox" id="dR"><span class="sl"></span></label><span class="swl">Doubler le réservoir</span></div>
+    <div class="srow"><label class="sw"><input type="checkbox" id="dS"><span class="sl"></span></label><span class="swl">Doubler sécheur + filtres</span></div>
+    <div class="br"><button class="btn bs" onclick="go(5)">← Retour</button><button class="btn bp bl" onclick="genR()">🔍 Voir la proposition →</button></div>
+  </div>
+
+  <!-- S7: Résultat -->
+  <div class="stp" id="step7">
+    <div class="sh"><div class="sn">Proposition</div><div class="st">Votre solution air comprimé</div><div class="sd2">Préconisation Worthington Creyssensac — <strong style="color:var(--r)">Tout est modifiable ci-dessous.</strong></div></div>
+    <div id="rZ"></div>
+    <div class="br"><button class="btn bs" onclick="go(1)">↺ Recommencer</button><button class="btn bp" onclick="window.print()">📄 Exporter PDF</button></div>
+  </div>
+</div>
+
+<script>
+// ═══════ DB ═══════
+const DB=[
+  {m:"ROLLAIR 750 C",g:"professionnelle",t:"fixe",kw:5.5,d8:42,d10:36,d13:30,p:[8,10,13],db:62,r:"750-2000",f:["Courroie","Airlogic²T","Compact"],hasT:true},
+  {m:"ROLLAIR 1000 C",g:"professionnelle",t:"fixe",kw:7.5,d8:60,d10:52,d13:42,p:[8,10,13],db:62,r:"750-2000",f:["Courroie","Airlogic²T"],hasT:true},
+  {m:"ROLLAIR 1500 C",g:"professionnelle",t:"fixe",kw:11,d8:90,d10:78,d13:66,p:[8,10,13],db:64,r:"750-2000",f:["Courroie","Airlogic²T"],hasT:true},
+  {m:"ROLLAIR 2000 C",g:"professionnelle",t:"fixe",kw:15,d8:132,d10:114,d13:96,p:[8,10,13],db:66,r:"750-2000",f:["Courroie","Airlogic²T"],hasT:true},
+  {m:"ROLLAIR 16",g:"professionnelle",t:"fixe",kw:11,d8:102,d10:84,d13:66,p:[7.5,8,10,13],db:68,r:"16-31",f:["Direct","Sépar. cyclonique"],hasT:true},
+  {m:"ROLLAIR 20",g:"professionnelle",t:"fixe",kw:15,d8:144,d10:126,d13:102,p:[7.5,8,10,13],db:68,r:"16-31",f:["Direct"],hasT:true},
+  {m:"ROLLAIR 25",g:"professionnelle",t:"fixe",kw:18.5,d8:180,d10:156,d13:126,p:[7.5,8,10,13],db:68,r:"16-31",f:["Direct"],hasT:true},
+  {m:"ROLLAIR 31",g:"professionnelle",t:"fixe",kw:22,d8:228,d10:198,d13:162,p:[7.5,8,10,13],db:68,r:"16-31",f:["Direct"],hasT:true},
+  {m:"ROLLAIR 20E",g:"professionnelle",t:"fixe",kw:15,d8:150,d10:132,d13:108,p:[8,10,13],db:66,r:"20-34",f:["Direct","IE3"],hasT:false},
+  {m:"ROLLAIR 25E",g:"professionnelle",t:"fixe",kw:18.5,d8:186,d10:162,d13:132,p:[8,10,13],db:66,r:"20-34",f:["Direct","IE3"],hasT:false},
+  {m:"ROLLAIR 30E",g:"professionnelle",t:"fixe",kw:22,d8:222,d10:198,d13:162,p:[8,10,13],db:66,r:"20-34",f:["Direct","IE3"],hasT:false},
+  {m:"ROLLAIR 34E",g:"professionnelle",t:"fixe",kw:26,d8:258,d10:234,d13:192,p:[8,10,13],db:68,r:"20-34",f:["Direct","IE3"],hasT:false},
+  {m:"ROLLAIR 40",g:"professionnelle",t:"fixe",kw:30,d8:294,d10:264,d13:222,p:[7.5,8,10,13],db:70,r:"30-50",f:["Direct"],hasT:false},
+  {m:"ROLLAIR 50",g:"professionnelle",t:"fixe",kw:37,d8:374,d10:336,d13:282,p:[7.5,8,10,13],db:72,r:"30-50",f:["Direct"],hasT:false},
+  {m:"ROLLAIR 40E",g:"professionnelle",t:"fixe",kw:30,d8:335,d10:300,d13:252,p:[7.5,8,10,13],db:72,r:"40-60",f:["Direct","Compact"],hasT:false},
+  {m:"ROLLAIR 50E",g:"professionnelle",t:"fixe",kw:37,d8:408,d10:366,d13:312,p:[7.5,8,10,13],db:73,r:"40-60",f:["Direct"],hasT:false},
+  {m:"ROLLAIR 60E",g:"professionnelle",t:"fixe",kw:45,d8:491,d10:444,d13:378,p:[7.5,8,10,13],db:74,r:"40-60",f:["Direct"],hasT:false},
+  {m:"ROLLAIR 75",g:"professionnelle",t:"fixe",kw:55,d8:588,d10:528,d13:450,p:[7.5,8,10,13],db:75,r:"75-125",f:["IE4","+4% FAD"],hasT:false},
+  {m:"ROLLAIR 100",g:"professionnelle",t:"fixe",kw:75,d8:780,d10:702,d13:600,p:[7.5,8,10,13],db:76,r:"75-125",f:["IE4"],hasT:false},
+  {m:"ROLLAIR 125",g:"professionnelle",t:"fixe",kw:90,d8:960,d10:864,d13:738,p:[7.5,8,10,13],db:77,r:"75-125",f:["IE4"],hasT:false},
+  {m:"ROLLAIR 10V",g:"professionnelle",t:"variable",kw:7.5,d8:72,d10:60,d13:48,p:[8,10,13],db:62,r:"10V-20eV",f:["VSD","ECO6i"],hasT:true},
+  {m:"ROLLAIR 16V",g:"professionnelle",t:"variable",kw:11,d8:108,d10:90,d13:72,p:[8,10,13],db:64,r:"10V-20eV",f:["VSD","ECO6i"],hasT:true},
+  {m:"ROLLAIR 20eV",g:"professionnelle",t:"variable",kw:15,d8:135,d10:117,d13:96,p:[8,10,13],db:66,r:"10V-20eV",f:["VSD","ECO6i"],hasT:true},
+  {m:"ROLLAIR 30-50 EV",g:"professionnelle",t:"variable",kw:22,d8:240,d10:210,d13:174,p:[7.5,8,10,13],db:70,r:"30-50 EV",f:["VSD","Direct"],hasT:false},
+  {m:"ROLLAIR 40-60 V",g:"professionnelle",t:"variable",kw:30,d8:354,d10:318,d13:264,p:[7.5,8,10,13],db:72,r:"40-60 V",f:["VSD"],hasT:false},
+  {m:"ROLLAIR 500V",g:"professionnelle",t:"variable",kw:37,d8:396,d10:354,d13:294,p:[7.5,8,10,13],db:72,r:"300-850V",f:["VSD"],hasT:false},
+  {m:"ROLLAIR 600V",g:"professionnelle",t:"variable",kw:45,d8:480,d10:432,d13:360,p:[7.5,8,10,13],db:73,r:"300-850V",f:["VSD"],hasT:false},
+  {m:"ROLLAIR 850V",g:"professionnelle",t:"variable",kw:55,d8:576,d10:516,d13:432,p:[7.5,8,10,13],db:75,r:"300-850V",f:["VSD"],hasT:false},
+  {m:"ROLLAIR 10 VPM",g:"industrielle",t:"variable",kw:7.5,d8:78,d10:66,d13:54,p:[4,8,10,13],db:62,r:"10-30 VPM",f:["iPM","45% éco."],hasT:true},
+  {m:"ROLLAIR 16 VPM",g:"industrielle",t:"variable",kw:11,d8:114,d10:96,d13:78,p:[4,8,10,13],db:62,r:"10-30 VPM",f:["iPM","45% éco."],hasT:true},
+  {m:"ROLLAIR 20 VPM",g:"industrielle",t:"variable",kw:15,d8:156,d10:132,d13:108,p:[4,8,10,13],db:64,r:"10-30 VPM",f:["iPM"],hasT:true},
+  {m:"ROLLAIR 25 VPM",g:"industrielle",t:"variable",kw:18.5,d8:192,d10:168,d13:138,p:[4,8,10,13],db:66,r:"10-30 VPM",f:["iPM"],hasT:true},
+  {m:"ROLLAIR 30 VPM",g:"industrielle",t:"variable",kw:22,d8:241,d10:210,d13:174,p:[4,8,10,13],db:66,r:"10-30 VPM",f:["iPM"],hasT:true},
+  {m:"ROLLAIR 40 VPM",g:"industrielle",t:"variable",kw:30,d8:360,d10:324,d13:270,p:[7.5,8,10,13],db:66,r:"40-50 VPM",f:["iPM","ROI 1-2a"],hasT:false},
+  {m:"ROLLAIR 50 VPM",g:"industrielle",t:"variable",kw:37,d8:428,d10:384,d13:324,p:[7.5,8,10,13],db:66,r:"40-50 VPM",f:["iPM","ROI 1-2a"],hasT:false},
+  {m:"ROLLAIR 60 VPM",g:"industrielle",t:"variable",kw:45,d8:504,d10:456,d13:384,p:[7.5,8,10,13],db:70,r:"60-125 VPM",f:["iPM","IE4"],hasT:false},
+  {m:"ROLLAIR 75 VPM",g:"industrielle",t:"variable",kw:55,d8:612,d10:552,d13:468,p:[7.5,8,10,13],db:72,r:"60-125 VPM",f:["iPM","IE4"],hasT:false},
+  {m:"ROLLAIR 100 VPM",g:"industrielle",t:"variable",kw:75,d8:816,d10:732,d13:624,p:[7.5,8,10,13],db:74,r:"60-125 VPM",f:["iPM","IE4"],hasT:false},
+  {m:"ROLLAIR 125 VPM",g:"industrielle",t:"variable",kw:90,d8:1037,d10:936,d13:792,p:[7.5,8,10,13],db:75,r:"60-125 VPM",f:["iPM","IE4"],hasT:false},
+  {m:"ROLLAIR 40E Ind",g:"industrielle",t:"fixe",kw:30,d8:342,d10:306,d13:258,p:[7.5,8,10,13],db:72,r:"40-60 Ind",f:["IE4","46°C"],hasT:false},
+  {m:"ROLLAIR 50E Ind",g:"industrielle",t:"fixe",kw:37,d8:414,d10:372,d13:318,p:[7.5,8,10,13],db:73,r:"40-60 Ind",f:["IE4"],hasT:false},
+  {m:"ROLLAIR 60E Ind",g:"industrielle",t:"fixe",kw:45,d8:498,d10:450,d13:384,p:[7.5,8,10,13],db:74,r:"40-60 Ind",f:["IE4"],hasT:false},
+  {m:"ROLLAIR 75 Ind",g:"industrielle",t:"fixe",kw:55,d8:600,d10:540,d13:462,p:[7.5,8,10,13],db:75,r:"75-125 Ind",f:["IE4","+5% FAD"],hasT:false},
+  {m:"ROLLAIR 100 Ind",g:"industrielle",t:"fixe",kw:75,d8:792,d10:714,d13:612,p:[7.5,8,10,13],db:76,r:"75-125 Ind",f:["IE4"],hasT:false},
+  {m:"ROLLAIR 125 Ind",g:"industrielle",t:"fixe",kw:90,d8:972,d10:876,d13:750,p:[7.5,8,10,13],db:77,r:"75-125 Ind",f:["IE4"],hasT:false},
+];
+
+// ═══════ SVG ═══════
+function svC(kw){const h=Math.min(80,40+kw*.5),c=kw>45?'#1A1A2E':kw>22?'#2C3E50':'#34495E';return`<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cg${kw}" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${c}"/><stop offset="100%" stop-color="#0F3460"/></linearGradient></defs><rect x="10" y="10" width="160" height="160" rx="12" fill="#F0F2F5"/><rect x="25" y="${90-h/2}" width="130" height="${h}" rx="6" fill="url(#cg${kw})"/><rect x="25" y="${90-h/2}" width="130" height="12" rx="6" fill="rgba(255,255,255,.1)"/><rect x="30" y="${90-h/2+4}" width="3" height="4" rx="1" fill="#E2001A"/><rect x="37" y="${90-h/2+4}" width="3" height="4" rx="1" fill="#00A896"/><text x="90" y="${90+h/2+24}" text-anchor="middle" font-family="Space Mono,monospace" font-size="9" font-weight="700" fill="#E2001A">${kw} kW</text><text x="90" y="${90-h/2-6}" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#ADB5BD">WORTHINGTON</text></svg>`}
+function svR(v){return`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="90" height="90" rx="8" fill="#F0F2F5"/><ellipse cx="50" cy="28" rx="18" ry="7" fill="#A0B4C8"/><rect x="32" y="28" width="36" height="40" fill="#B0C4D8"/><ellipse cx="50" cy="68" rx="18" ry="7" fill="#95A8BC"/><text x="50" y="53" text-anchor="middle" font-family="Space Mono,monospace" font-size="8" font-weight="700" fill="#1A1A2E">${v}L</text><circle cx="50" cy="86" r="2.5" fill="#F4A261"/></svg>`}
+function svD(type){const col=type==='ads'?'#7C3AED':'#2C3E50',lbl=type==='ads'?'ADSORP.':'FRIGO';return`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="90" height="90" rx="8" fill="#F0F2F5"/><rect x="22" y="20" width="56" height="52" rx="5" fill="${col}"/><rect x="22" y="20" width="56" height="10" rx="5" fill="rgba(255,255,255,.08)"/><circle cx="32" cy="25" r="2" fill="#00A896"/><circle cx="39" cy="25" r="2" fill="#4361EE"/><text x="50" y="52" text-anchor="middle" font-size="12">${type==='ads'?'🌡️':'❄️'}</text><text x="50" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#6C757D">SÉCHEUR ${lbl}</text></svg>`}
+function svF(t){const c=t==='charbon'?'#F4A261':t==='sterile'?'#E2001A':'#4361EE',l=t==='pre'?'PRÉ-FILTRE':t==='post'?'FILTRE FIN':t==='charbon'?'CHARBON':t==='sterile'?'STÉRILE':'FILTRE';return`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="90" height="90" rx="8" fill="#F0F2F5"/><rect x="32" y="16" width="36" height="60" rx="5" fill="#E9ECEF" stroke="#CED4DA" stroke-width="1.5"/><rect x="37" y="28" width="26" height="38" rx="3" fill="${c}" opacity=".2"/><circle cx="50" cy="47" r="8" fill="${c}" opacity=".3"/><text x="50" y="51" text-anchor="middle" font-size="8" font-weight="700" fill="${c}">F</text><text x="50" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="5" font-weight="600" fill="#6C757D">${l}</text></svg>`}
+function svS(){return`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="90" height="90" rx="8" fill="#F0F2F5"/><rect x="28" y="18" width="44" height="52" rx="6" fill="#DEE2E6" stroke="#CED4DA" stroke-width="1.5"/><circle cx="50" cy="40" r="12" fill="#E8F4FD" stroke="#4361EE" stroke-width="1"/><text x="50" y="44" text-anchor="middle" font-size="10">💧</text><text x="50" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="5.5" fill="#6C757D">SÉPARATEUR</text></svg>`}
+
+// ═══════ STATE ═══════
+const S={step:1,debit:0,pression:0,temp:25,usage:null,gamme:null,backup:null,airQ:null,iso:'2.4.1',treat:{res:false,fpre:false,sec:false,fpost:false,fch:false,sep:false},sechIntegre:false};
+let chains={L1:[],L2:[]};
+
+// ═══════ SIZES ═══════
+const RES_SZ=[50,100,150,200,270,300,500,750,1000,1500,2000,3000];
+const DRY_SZ=[18,30,42,60,78,108,150,210,300,420,600,900,1200];
+const FILT_SZ=[10,17,25,35,52,85,125,175,250,350,510,750,1050,1500,2550]; // m³/h capacity
+
+// ═══════ NAV ═══════
+function go(n){if(n>S.step&&!vl(S.step))return;document.querySelectorAll('.stp').forEach(s=>s.classList.remove('ac'));document.getElementById('step'+n).classList.add('ac');S.step=n;uP();window.scrollTo({top:0,behavior:'smooth'})}
+function vl(n){if(n===1){const d=parseFloat(document.getElementById('inD').value),p=document.getElementById('inP').value,t=document.getElementById('inT').value;if(!d||!p||!t){alert('Remplissez tous les champs.');return false}S.debit=d;S.pression=parseFloat(p);S.temp=parseInt(t);return true}if(n===2)return S.usage?true:(alert('Choisissez.'),false);if(n===3)return S.gamme?true:(alert('Choisissez.'),false);if(n===4)return S.backup?true:(alert('Choisissez.'),false);if(n===5)return S.airQ?true:(alert('Choisissez.'),false);return true}
+function uP(){document.querySelectorAll('.sd').forEach(d=>{const s=parseInt(d.dataset.s);d.classList.remove('ac','dn');if(s===S.step)d.classList.add('ac');else if(s<S.step)d.classList.add('dn')})}
+function sel(k,v,el){S[k]=v;el.parentElement.querySelectorAll('.oc').forEach(c=>c.classList.remove('se'));el.classList.add('se');const m={usage:'b2',gamme:'b3',backup:'b4',airQ:'b5'};if(m[k])document.getElementById(m[k]).disabled=false}
+function show(id){document.getElementById(id).classList.remove('hd')}
+function hide(id){document.getElementById(id).classList.add('hd')}
+function sI(el,iso){document.querySelectorAll('.ich').forEach(c=>c.classList.remove('se'));el.classList.add('se');const p=iso.split('.');document.getElementById('iP').value=p[0];document.getElementById('iH').value=p[1];document.getElementById('iO').value=p[2];uI()}
+function uI(){S.iso=`${document.getElementById('iP').value}.${document.getElementById('iH').value}.${document.getElementById('iO').value}`;document.getElementById('iDsp').textContent=`Classe ISO 8573-1 : ${S.iso}`}
+function tT(el){el.classList.toggle('on');S.treat[el.dataset.i]=el.classList.contains('on')}
+
+// ═══════ ENGINE ═══════
+function dK(){return S.pression<=8?'d8':S.pression<=10?'d10':'d13'}
+function fC(debit,gamme,type){const k=dK();let cs=DB.filter(c=>c.g===gamme&&c.t===type&&c.p.includes(S.pression)&&c[k]>=debit);if(!cs.length)cs=DB.filter(c=>c.t===type&&c.p.includes(S.pression)&&c[k]>=debit);cs.sort((a,b)=>a[k]-b[k]);return cs[0]||null}
+function fAlts(mc,debit){const k=dK(),mn=debit*.7,mx=debit*1.5;return DB.filter(c=>c.p.includes(S.pression)&&c[k]>=mn&&c[k]<=mx&&c.m!==mc.m).sort((a,b)=>Math.abs(a[k]-debit)-Math.abs(b[k]-debit)).slice(0,6)}
+function fAll(mc){const k=dK();return DB.filter(c=>c.p.includes(S.pression)&&c.m!==mc.m).sort((a,b)=>a.kw-b.kw)}
+function cRes(d){const v=Math.ceil(d/60*12);return RES_SZ.find(s=>s>=v)||RES_SZ[RES_SZ.length-1]}
+function cDry(d){let c=d;if(S.temp>30)c*=1.15;if(S.temp>40)c*=1.3;return DRY_SZ.find(s=>s>=c/60*60)||DRY_SZ[DRY_SZ.length-1]}
+function cFilt(d){return FILT_SZ.find(s=>s>=d)||FILT_SZ[FILT_SZ.length-1]}
+
+// ═══════ INSERTABLE ITEMS CATALOG ═══════
+function catalog(debit){
+  const fs=cFilt(debit),rv=cRes(debit),dv=cDry(debit);
+  return[
+    {type:'reservoir',name:'Réservoir',icon:'🛢️',detail:rv+'L',svg:svR(rv),sizes:RES_SZ,curSize:rv,unit:'L',purgeur:true},
+    {type:'filtre-pre',name:'Pré-filtre 3µ',icon:'🔽',detail:fs+' m³/h',svg:svF('pre'),sizes:FILT_SZ,curSize:fs,unit:' m³/h',purgeur:true},
+    {type:'secheur-frigo',name:'Sécheur frigorifique',icon:'❄️',detail:'DSP '+dv,svg:svD('frigo'),sizes:DRY_SZ,curSize:dv,unit:'',purgeur:true},
+    {type:'secheur-ads',name:'Sécheur adsorption',icon:'🌡️',detail:'PRP −40°C',svg:svD('ads'),sizes:DRY_SZ,curSize:dv,unit:'',purgeur:true},
+    {type:'filtre-post',name:'Filtre fin 1µ',icon:'🔽',detail:fs+' m³/h',svg:svF('post'),sizes:FILT_SZ,curSize:fs,unit:' m³/h',purgeur:true},
+    {type:'filtre-charbon',name:'Filtre charbon actif',icon:'🔽',detail:fs+' m³/h',svg:svF('charbon'),sizes:FILT_SZ,curSize:fs,unit:' m³/h',purgeur:true},
+    {type:'filtre-sterile',name:'Filtre stérile 0,01µ',icon:'🔽',detail:fs+' m³/h',svg:svF('sterile'),sizes:FILT_SZ,curSize:fs,unit:' m³/h',purgeur:true},
+    {type:'separateur',name:'Séparateur eau/huile',icon:'💧',detail:'',svg:svS(),sizes:null,curSize:null,unit:'',purgeur:false},
+  ];
+}
+
+// ═══════ BUILD CHAIN ═══════
+function buildLine(comp,dbl){
+  const k=dK(),d=comp[k],rv=cRes(d),dv=cDry(d),fs=cFilt(d);
+  // Determine dryer type from ISO humidity class
+  const isoHum=S.airQ==='oui'?parseInt(S.iso.split('.')[1]):99;
+  const isoHuile=S.airQ==='oui'?parseInt(S.iso.split('.')[2]):99;
+  const needAds=isoHum<=2; // PRP ≤ −40°C → adsorption obligatoire
+  const needFrigo=isoHum>=3&&isoHum<=4; // PRP −20°C à +3°C → frigo suffit
+  const needCharbon=isoHuile<=1; // huile ≤ 0,01 mg/m³ → charbon actif
+  const needFiltreFin=isoHuile<=2; // huile ≤ 0,1 mg/m³ → filtre fin
+  let line=[];
+  line.push({id:'comp',type:'compressor',name:comp.m,detail:comp.kw+' kW',icon:'⚙️',on:true,locked:true,svg:svC(comp.kw),purgeur:false,purOn:false,sizes:null,curSize:null,unit:''});
+  line.push({id:'res',type:'reservoir',name:'Réservoir',detail:rv+'L',icon:'🛢️',on:S.treat.res,locked:false,svg:svR(rv),purgeur:true,purOn:false,sizes:RES_SZ,curSize:rv,unit:'L'});
+  if(document.getElementById('dR').checked)line.push({id:'res2',type:'reservoir',name:'Réservoir (x2)',detail:rv+'L',icon:'🛢️',on:S.treat.res,locked:false,svg:svR(rv),purgeur:true,purOn:false,sizes:RES_SZ,curSize:rv,unit:'L'});
+  line.push({id:'fpre',type:'filtre-pre',name:'Pré-filtre 3µ',detail:fs+' m³/h',icon:'🔽',on:S.treat.fpre||(S.airQ==='oui'),locked:false,svg:svF('pre'),purgeur:true,purOn:false,sizes:FILT_SZ,curSize:fs,unit:' m³/h'});
+  if(!S.sechIntegre){
+    if(needAds){
+      // Classe humidité 1-2 : sécheur frigo en pré-traitement + adsorption
+      line.push({id:'sec_frigo',type:'secheur-frigo',name:'Sécheur frigo',detail:'DSP '+dv,icon:'❄️',on:S.treat.sec,locked:false,svg:svD('frigo'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});
+      line.push({id:'sec_ads',type:'secheur-ads',name:'Sécheur adsorption',detail:'PRP '+(isoHum===1?'−70°C':'−40°C'),icon:'🌡️',on:true,locked:false,svg:svD('ads'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});
+      if(document.getElementById('dS').checked){
+        line.push({id:'sec_frigo2',type:'secheur-frigo',name:'Sécheur frigo (x2)',detail:'DSP '+dv,icon:'❄️',on:S.treat.sec,locked:false,svg:svD('frigo'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});
+        line.push({id:'sec_ads2',type:'secheur-ads',name:'Sécheur adsorp. (x2)',detail:'PRP '+(isoHum===1?'−70°C':'−40°C'),icon:'🌡️',on:true,locked:false,svg:svD('ads'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});
+      }
+    }else{
+      // Classe humidité 3+ : sécheur frigo suffit
+      line.push({id:'sec',type:'secheur-frigo',name:'Sécheur frigo',detail:'DSP '+dv,icon:'❄️',on:S.treat.sec||(S.airQ==='oui'&&needFrigo),locked:false,svg:svD('frigo'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});
+      if(document.getElementById('dS').checked){line.push({id:'sec2',type:'secheur-frigo',name:'Sécheur frigo (x2)',detail:'DSP '+dv,icon:'❄️',on:S.treat.sec||(S.airQ==='oui'&&needFrigo),locked:false,svg:svD('frigo'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});}
+    }
+  }
+  line.push({id:'fpost',type:'filtre-post',name:'Filtre fin 1µ',detail:fs+' m³/h',icon:'🔽',on:S.treat.fpost||needFiltreFin,locked:false,svg:svF('post'),purgeur:true,purOn:false,sizes:FILT_SZ,curSize:fs,unit:' m³/h'});
+  line.push({id:'fch',type:'filtre-charbon',name:'Charbon actif',detail:fs+' m³/h',icon:'🔽',on:S.treat.fch||needCharbon,locked:false,svg:svF('charbon'),purgeur:true,purOn:false,sizes:FILT_SZ,curSize:fs,unit:' m³/h'});
+  line.push({id:'sep',type:'separateur',name:'Séparateur H/E',detail:'',icon:'💧',on:S.treat.sep,locked:false,svg:svS(),purgeur:false,purOn:false,sizes:null,curSize:null,unit:''});
+  return line;
+}
+
+// ═══════ RENDER CHAIN ═══════
+function renderChain(){
+  let h='';
+  ['L1','L2'].forEach(lid=>{
+    const line=chains[lid];if(!line||!line.length)return;
+    h+=`<div class="ec-line"><div class="ec-line-label">${lid==='L1'?'Ligne principale':'Ligne 2 (doublée)'}</div>`;
+    line.forEach((item,i)=>{
+      // Insert + before each item (except compressor)
+      if(!item.locked){h+=`<div class="ec-ins"><div class="ec-ins-btn" onclick="openIns('${lid}',${i},this)" title="Insérer un élément ici">+</div></div>`}
+      const cls=item.locked?'on':(item.on?'on':'off');
+      h+=`<div class="ec-item ${cls}">`;
+      if(!item.locked){
+        h+=`<div class="ei-tog" onclick="togItem('${lid}',${i})">${item.on?'✓':'+'}</div>`;
+        h+=`<div class="ei-rm" onclick="rmItem('${lid}',${i})" title="Supprimer">✕</div>`;
+      }
+      h+=`<div class="ei-img">${item.svg}</div><div class="ei-name">${item.name}</div>`;
+      if(item.sizes&&item.on){
+        h+=`<select onchange="resItem('${lid}',${i},this.value)">`;
+        item.sizes.forEach(s=>{h+=`<option value="${s}" ${s===item.curSize?'selected':''}>${s}${item.unit}</option>`});
+        h+=`</select>`;
+      } else h+=`<div class="ei-det">${item.detail}</div>`;
+      if(item.purgeur&&item.on)h+=`<div class="ec-pur ${item.purOn?'on':''}" onclick="togPur('${lid}',${i})"><div class="ep">${item.purOn?'✓':''}</div>Purgeur</div>`;
+      h+=`</div>`;
+      if(i<line.length-1)h+=`<div class="ec-arrow">→</div>`;
+    });
+    // Add button at end
+    h+=`<div class="ec-ins"><div class="ec-ins-btn" onclick="openIns('${lid}',${line.length},this)" title="Ajouter en fin de ligne">+</div></div>`;
+    h+=`</div>`;
+  });
+  document.getElementById('chainZone').innerHTML=h;
+}
+
+function togItem(lid,i){chains[lid][i].on=!chains[lid][i].on;renderChain()}
+function togPur(lid,i){chains[lid][i].purOn=!chains[lid][i].purOn;renderChain()}
+function rmItem(lid,i){if(confirm('Retirer cet élément de la chaîne ?')){chains[lid].splice(i,1);renderChain()}}
+function resItem(lid,i,val){
+  const it=chains[lid][i];it.curSize=parseInt(val);
+  if(it.type==='reservoir'){it.detail=val+'L';it.svg=svR(parseInt(val))}
+  else if(it.type.startsWith('secheur')){it.detail=(it.type==='secheur-ads'?'ADS ':'DSP ')+val}
+  else{it.detail=val+it.unit}
+  renderChain();
+}
+
+function openIns(lid,idx,btn){
+  closePop();
+  const k=dK(),comp=chains.L1[0],d=comp?DB.find(c=>c.m===comp.name):null,debit=d?d[k]:S.debit;
+  const cat=catalog(debit);
+  const menu=document.createElement('div');menu.className='pop-menu';menu.id='popMenu';
+  const rect=btn.getBoundingClientRect();
+  menu.style.top=Math.min(rect.bottom+4,window.innerHeight-340)+'px';
+  menu.style.left=Math.min(rect.left,window.innerWidth-240)+'px';
+  cat.forEach(c=>{
+    const d=document.createElement('div');d.className='pop-item';
+    d.innerHTML=`<span class="pi-icon">${c.icon}</span><div><div class="pi-name">${c.name}</div><div class="pi-desc">${c.detail}</div></div>`;
+    d.onclick=()=>{
+      const nItem={id:c.type+'_'+Date.now(),type:c.type,name:c.name,detail:c.detail,icon:c.icon,on:true,locked:false,svg:c.svg,purgeur:c.purgeur,purOn:false,sizes:c.sizes,curSize:c.curSize,unit:c.unit};
+      chains[lid].splice(idx,0,nItem);closePop();renderChain();
+    };
+    menu.appendChild(d);
+  });
+  document.body.appendChild(menu);
+  setTimeout(()=>document.addEventListener('click',closePop,{once:true}),10);
+}
+function closePop(){const m=document.getElementById('popMenu');if(m)m.remove()}
+
+// ═══════ GENERATE ═══════
+function genR(){
+  const k=dK();let td=S.backup==='appoint'?S.debit/2:S.debit;
+  const main=fC(td,S.gamme,S.usage==='variable'?'variable':'fixe');
+  if(!main){document.getElementById('rZ').innerHTML=`<div class="rc"><div class="rch"><h3>Aucun résultat</h3></div><div class="rcb">Modifiez vos critères ou contactez Worthington Creyssensac.</div></div>`;go(7);return}
+
+  S.sechIntegre=false; // reset
+  chains.L1=buildLine(main,false);
+  chains.L2=document.getElementById('dL').checked?buildLine(main,true):[];
+
+  let h='';
+  h+=rComp(main,S.backup==='appoint'?'Compresseur (Appoint 1)':'Compresseur Principal','main',false);
+  if(S.backup!=='non'){let bk=S.backup==='appoint'?fC(S.debit/2,S.gamme,S.usage==='variable'?'variable':'fixe'):main;if(bk)h+=rComp(bk,S.backup==='secours'?'Secours':S.backup==='redondance'?'Redondance':'Appoint 2','bk',S.backup==='appoint')}
+
+  // Sécheur intégré warning
+  if(main.hasT)h+=`<div class="wbox"><strong>💡 Sécheur intégré disponible !</strong> — Le ${main.m} existe en version <strong>(T) avec sécheur intégré</strong>. Si vous choisissez cette option, le sécheur frigorifique externe n'est plus nécessaire (sauf besoin de séchage supplémentaire, ex: adsorption).<br><br><label style="display:flex;align-items:center;gap:8px;cursor:pointer;margin-top:6px"><input type="checkbox" id="secIntChk" onchange="toggleSechIntegre()" style="width:16px;height:16px;accent-color:var(--r)"><strong>Oui, passer en version sécheur intégré (T)</strong></label></div>`;
+
+  // Treatment chain
+  let isoInfo='';
+  if(S.airQ==='oui'){
+    const ih=parseInt(S.iso.split('.')[1]),io=parseInt(S.iso.split('.')[2]);
+    if(ih<=2)isoInfo=`<div class="wbox"><strong>🌡️ Classe humidité ${ih} (PRP ${ih===1?'−70°C':'−40°C'})</strong> — Un sécheur par <strong>adsorption</strong> est nécessaire. Le sécheur frigorifique seul ne peut atteindre ce point de rosée. La chaîne inclut un sécheur frigo en pré-traitement + un sécheur adsorption.</div>`;
+    else if(ih===3)isoInfo=`<div class="ib"><strong>❄️ Classe humidité 3 (PRP −20°C)</strong> — Un sécheur frigorifique haute performance suffit pour cette classe. Si besoin d'un PRP garanti, envisagez un sécheur par adsorption.</div>`;
+    else if(ih<=4)isoInfo=`<div class="ib"><strong>❄️ Classe humidité ${ih} (PRP +3°C)</strong> — Un sécheur frigorifique standard est adapté à cette classe.</div>`;
+    if(io<=1)isoInfo+=`<div class="ib" style="margin-top:6px"><strong>🔽 Classe huile 1 (≤ 0,01 mg/m³)</strong> — Filtre fin + filtre charbon actif activés automatiquement.</div>`;
+  }
+  h+=isoInfo;
+  h+=`<div class="rc"><div class="rch"><h3>Chaîne de traitement d'air</h3>${S.airQ==='oui'?`<span class="bg">ISO ${S.iso}</span>`:''}
+    <span class="bg" style="background:var(--ok)">MODIFIABLE</span></div>
+  <div class="rcb">
+    <div style="font-size:12px;color:var(--g6);margin-bottom:12px">
+      <strong style="color:var(--ok)">✓</strong> activer/désactiver · <strong style="color:var(--g5)">✕</strong> supprimer · <strong style="color:var(--r)">+</strong> insérer un élément (sécheur adsorption, filtre, réservoir…) · Sélecteurs = modifier les tailles · Purgeur = ajouter un purgeur automatique sous l'élément.
+    </div>
+    <div class="ec-wrap" id="chainZone"></div>
+  </div></div>`;
+
+  // Options
+  h+=`<div class="rc"><div class="rch"><h3>Options</h3></div><div class="rcb"><div class="opt-g">
+    <div class="opc" onclick="this.classList.toggle('on')"><div class="ock">✓</div><div><div class="ocn">Récupération d'énergie</div><div class="ocd">Échangeur huile/eau → eau chaude</div></div></div>
+    <div class="opc" onclick="this.classList.toggle('on')"><div class="ock">✓</div><div><div class="ocn">ICONS Télésurveillance</div><div class="ocd">Monitoring GSM à distance</div></div></div>
+    <div class="opc" onclick="this.classList.toggle('on')"><div class="ock">✓</div><div><div class="ocn">Purgeur ECO zéro perte</div><div class="ocd">Capacitif, sans perte d'air</div></div></div>
+  </div></div></div>`;
+
+  // Summary
+  h+=`<div class="rc"><div class="rch" style="background:linear-gradient(135deg,var(--rd),var(--r))"><h3>Récapitulatif</h3></div><div class="rcb"><div class="sg"><div class="si"><div class="sv">${S.debit}</div><div class="sll">m³/h requis</div></div><div class="si"><div class="sv">${S.pression}</div><div class="sll">bar</div></div><div class="si"><div class="sv">${S.temp}°C</div><div class="sll">T° ambiante</div></div><div class="si"><div class="sv">${S.usage==='variable'?'VSD':'Fixe'}</div><div class="sll">Régulation</div></div></div></div></div>`;
+
+  document.getElementById('rZ').innerHTML=h;
+  renderChain();
+  go(7);
+}
+
+function toggleSechIntegre(){
+  S.sechIntegre=document.getElementById('secIntChk').checked;
+  // Rebuild chains removing/adding secheur frigo
+  const k=dK();const comp=DB.find(c=>c.m===chains.L1[0].name)||DB[0];
+  if(S.sechIntegre){
+    // Update compressor name
+    chains.L1[0].name=comp.m+' T';chains.L1[0].detail=comp.kw+' kW + sécheur';
+    // Remove secheur frigo items
+    chains.L1=chains.L1.filter(it=>it.type!=='secheur-frigo');
+    if(chains.L2.length)chains.L2=chains.L2.filter(it=>it.type!=='secheur-frigo');
+  }else{
+    chains.L1[0].name=comp.m;chains.L1[0].detail=comp.kw+' kW';
+    // Re-insert secheur frigo after fpre
+    const dv=cDry(comp[k]);
+    const idx=chains.L1.findIndex(it=>it.type==='filtre-pre'||it.id==='fpre');
+    if(idx>=0)chains.L1.splice(idx+1,0,{id:'sec',type:'secheur-frigo',name:'Sécheur frigo',detail:'DSP '+dv,icon:'❄️',on:true,locked:false,svg:svD('frigo'),purgeur:true,purOn:false,sizes:DRY_SZ,curSize:dv,unit:''});
+  }
+  renderChain();
+}
+
+function rComp(comp,title,id,isAppoint){
+  const k=dK(),alts=fAlts(comp,comp[k]);
+  const recoLabel=isAppoint?`<div style="font-size:11px;color:var(--ok);font-weight:600;margin-bottom:8px">✓ Préconisation : ±20% du débit cible (${Math.round(S.debit/2)} m³/h)</div>`:'';
+  const allBtnHtml=isAppoint?`<div style="margin-top:10px;border-top:1px solid var(--g2);padding-top:10px"><button class="cb" onclick="showFullRange('${id}','${comp.m}')">📋 Voir toute la gamme disponible (${DB.filter(c=>c.p.includes(S.pression)).length} modèles à ${S.pression} bar)</button><div class="al hd" id="full-${id}"></div></div>`:'';
+  return`<div class="rc" id="rc-${id}"><div class="rch"><h3>${title}</h3><span class="bg">${comp.g==='industrielle'?'INDUSTRIELLE':'PROFESSIONNELLE'}</span></div><div class="rcb">
+    <div class="pc"><div class="pi">${svC(comp.kw)}</div><div>
+      <div class="pm" id="pm-${id}">${comp.m}</div><div class="pr">Gamme Rollair ${comp.r}</div>
+      <div class="ps"><div class="psi"><div class="psv" id="pk-${id}">${comp.kw}</div><div class="psl">kW</div></div><div class="psi"><div class="psv" id="pd-${id}">${comp[k]}</div><div class="psl">m³/h</div></div><div class="psi"><div class="psv">${S.pression}</div><div class="psl">bar</div></div><div class="psi"><div class="psv">${comp.db}</div><div class="psl">dB(A)</div></div></div>
+      <div class="pfs">${comp.f.map(f=>`<div class="pf"><span class="fd"></span>${f}</div>`).join('')}</div>
+    </div></div>
+    <div class="cp">
+      <button class="cb" onclick="toggleAlts('${id}')">🔄 Modifier — voir alternatives${isAppoint?' (±20%)':''}</button>
+      <div class="al hd" id="al-${id}">${recoLabel}${alts.map(a=>`<div class="ai" onclick="swC('${id}','${a.m}',this)"><div><div class="an">${a.m}</div><div class="as">${a.kw} kW · ${a[k]} m³/h · ${a.db} dB(A) · ${a.g}</div></div><div class="asl">Choisir →</div></div>`).join('')}${!alts.length?'<div style="font-size:12px;color:var(--g5);padding:8px">Aucune alternative ±20%.</div>':''}</div>
+      ${allBtnHtml}
+    </div></div></div>`;
+}
+function showFullRange(id,currentModel){
+  const el=document.getElementById('full-'+id);
+  if(!el.classList.contains('hd')){el.classList.add('hd');return;}
+  el.classList.remove('hd');
+  if(el.innerHTML)return; // already loaded
+  const k=dK();
+  const all=fAll({m:currentModel});
+  let h='<div style="font-size:11px;color:var(--wa);font-weight:600;margin-bottom:8px">⚠️ Gamme complète — Tous les compresseurs à '+S.pression+' bar, du plus petit au plus grand</div>';
+  h+='<div style="max-height:400px;overflow-y:auto;border:1px solid var(--g2);border-radius:var(--rs);padding:4px">';
+  let prevKw=0;
+  all.forEach(a=>{
+    // Add separator for power ranges
+    if(Math.floor(a.kw/10)!==Math.floor(prevKw/10)){
+      h+=`<div style="padding:4px 10px;background:var(--g1);font-size:9px;font-weight:700;color:var(--g6);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--g2)">${a.kw<15?'2,2 – 15 kW':a.kw<30?'15 – 30 kW':a.kw<50?'30 – 50 kW':'55 – 90 kW'}</div>`;
+    }
+    prevKw=a.kw;
+    h+=`<div class="ai" onclick="swC('${id}','${a.m}',this)" style="border-radius:0;border-left:0;border-right:0;margin:0"><div><div class="an">${a.m}</div><div class="as">${a.kw} kW · ${a[k]} m³/h · ${a.db} dB(A) · ${a.g}</div></div><div class="asl">Choisir →</div></div>`;
+  });
+  h+='</div>';
+  el.innerHTML=h;
+}
+function toggleAlts(id){document.getElementById('al-'+id).classList.toggle('hd')}
+function swC(id,model,el){const c=DB.find(x=>x.m===model);if(!c)return;const k=dK();document.getElementById('pm-'+id).textContent=c.m;document.getElementById('pk-'+id).textContent=c.kw;document.getElementById('pd-'+id).textContent=c[k];const card=document.getElementById('rc-'+id);card.querySelector('.pi').innerHTML=svC(c.kw);card.querySelector('.pr').textContent='Gamme Rollair '+c.r;card.querySelector('.pfs').innerHTML=c.f.map(f=>`<div class="pf"><span class="fd"></span>${f}</div>`).join('');card.querySelector('.bg').textContent=c.g==='industrielle'?'INDUSTRIELLE':'PROFESSIONNELLE';el.parentElement.querySelectorAll('.ai').forEach(a=>a.classList.remove('ch'));el.classList.add('ch')}
+</script>
+</body>
+</html>
